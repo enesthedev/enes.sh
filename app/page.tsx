@@ -1,3 +1,5 @@
+import { Button } from '@/app/components/ui/Button'
+
 export default function Home() {
-  return <>test</>
+  return <Button variant='outline'>Button</Button>
 }
