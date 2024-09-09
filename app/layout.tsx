@@ -1,6 +1,10 @@
 import type { Metadata, Viewport } from 'next'
 
-import 'app/tailwind.css'
+import { Navbar } from '@app/components'
+import { Providers } from '@app/providers'
+import { cn } from '@app/utils'
+
+import '@app/tailwind.css'
 
 type LayoutProps = {
   children: React.ReactNode
@@ -13,15 +17,20 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'white' },
-    { media: '(prefers-color-scheme: dark)', color: 'white' }
+    { media: '(prefers-color-scheme: light)', color: 'black' },
+    { media: '(prefers-color-scheme: dark)', color: 'black' }
   ]
 }
 
 export default function Layout({ children }: LayoutProps) {
   return (
     <html lang='en'>
-      <body>{children}</body>
+      <body className={cn('min-h-screen font-sans antialiased')}>
+        <Providers>
+          {children}
+          <Navbar />
+        </Providers>
+      </body>
     </html>
   )
 }
