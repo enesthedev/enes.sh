@@ -1,13 +1,14 @@
 import type { Metadata, Viewport } from 'next'
 
+import { Providers } from '@app/[locale]/providers'
 import { Navbar } from '@app/components'
-import { Providers } from '@app/providers'
 import { cn } from '@app/utils'
 
 import '@app/tailwind.css'
 
 type LayoutProps = {
   children: React.ReactNode
+  params: { locale: string }
 }
 
 export const metadata: Metadata = {
@@ -22,9 +23,9 @@ export const viewport: Viewport = {
   ]
 }
 
-export default function Layout({ children }: LayoutProps) {
+export default function Layout({ children, params: { locale } }: LayoutProps) {
   return (
-    <html lang='en'>
+    <html lang={locale}>
       <body className={cn('min-h-screen font-sans antialiased')}>
         <Providers>
           {children}
