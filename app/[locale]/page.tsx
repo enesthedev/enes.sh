@@ -1,15 +1,18 @@
 import Me from '@public/images/avatar.png'
 
+import { useTranslations } from 'next-intl'
+
 import { Avatar, AvatarFallback, AvatarImage, Transition, WordFadeIn } from '@app/components'
 
 export default function Page() {
+  const t = useTranslations('Landing')
   return (
     <div className='flex min-h-screen justify-center'>
       <div className='flex min-h-screen w-full max-w-7xl flex-col justify-center px-6 py-4 md:px-8 lg:px-24'>
         <div className='flex flex-col-reverse md:flex-row md:space-x-12'>
           <section className='flex w-full flex-col space-y-8'>
             <WordFadeIn
-              words='Merhaba, Ben Enes 👋'
+              words={t('test')}
               className='text-3xl font-bold tracking-tight text-zinc-800 lg:text-5xl'
             />
             <Transition delay={0.3}>
