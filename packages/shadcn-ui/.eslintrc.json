@@ -1,0 +1,14 @@
+{
+  "extends": [
+    "@enes-sh/eslint-config",
+    "plugin:react/recommended",
+    "plugin:tailwindcss/recommended"
+  ],
+  "rules": {
+    "@typescript-eslint/no-require-imports": "off",
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
+    "tailwindcss/classnames-order": "off",
+    "tailwindcss/no-custom-classname": "off"
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "extends": ["next/core-web-vitals", "next/typescript", "@enes-sh/eslint-config"],
+  "plugins": ["react"]
+}
