@@ -1,0 +1,60 @@
+{
+  "private": true,
+  "name": "@enes-sh/ui",
+  "version": "1.0.5",
+  "description": "Wrapper for @shadcn/ui",
+  "author": "Enes Bayraktar <enes.bayraktar@outlook.com.tr>",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch"
+  },
+  "dependencies": {
+    "@enes-sh/utils": "workspace:*",
+    "@radix-ui/react-avatar": "^1.1.0",
+    "@radix-ui/react-icons": "^1.3.0",
+    "@radix-ui/react-navigation-menu": "^1.2.0",
+    "@radix-ui/react-separator": "^1.1.0",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@radix-ui/react-tooltip": "^1.1.2",
+    "framer-motion": "^11.9.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "devDependencies": {
+    "@enes-sh/eslint-config": "workspace:*",
+    "@enes-sh/typescript-config": "workspace:*",
+    "@types/bun": "latest",
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^8",
+    "eslint-plugin-react": "^7.37.0",
+    "eslint-plugin-tailwindcss": "^3.17.4",
+    "prettier": "^3.3.3",
+    "prettier-plugin-package-perfection": "^1.1.0",
+    "prettier-plugin-sort-json": "^4.0.0",
+    "prettier-plugin-tailwindcss": "^0.6.8",
+    "tailwindcss": "^3.4.13",
+    "tsup": "^8.3.0",
+    "typescript": "^5"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./hooks": {
+      "types": "./dist/hooks.d.ts",
+      "default": "./dist/hooks.js"
+    }
+  }
+}
