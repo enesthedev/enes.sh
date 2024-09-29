@@ -1,9 +1,10 @@
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
+  darkMode: 'class',
   content: [
     './app/**/*.{js,ts,jsx,tsx,mdx}',
-    '../../node_modules/@enes-sh/shadcn-ui/src/**/*.{js,ts,jsx,tsx}' // Global node modules
+    '../../node_modules/@enes-sh/ui/src/**/*.{js,ts,jsx,tsx}' // Global node modules
   ],
   prefix: '',
   theme: {

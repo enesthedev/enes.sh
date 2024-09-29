@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "@enes-sh/web",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "scripts": {
     "build": "next build",
     "dev": "next dev",
@@ -9,21 +9,26 @@
     "start": "next start"
   },
   "dependencies": {
-    "@enes-sh/shadcn-ui": "workspace:*",
+    "@enes-sh/ui": "workspace:*",
+    "@enes-sh/utils": "workspace:*",
     "@t3-oss/env-nextjs": "^0.11.1",
+    "lucide-react": "^0.446.0",
     "next": "14.2.13",
-    "react": "^18",
-    "react-dom": "^18",
+    "next-intl": "^3.19.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sharp": "^0.33.5",
     "tailwindcss": "^3.4.1",
     "tailwindcss-animate": "^1.0.7",
+    "usehooks-ts": "^3.1.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {
     "@enes-sh/eslint-config": "workspace:*",
     "@enes-sh/typescript-config": "workspace:*",
     "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
     "eslint": "^8",
     "eslint-config-next": "14.2.13",
     "jiti": "^2.0.0",

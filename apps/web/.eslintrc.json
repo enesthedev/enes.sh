@@ -1,4 +1,7 @@
 {
   "extends": ["next/core-web-vitals", "next/typescript", "@enes-sh/eslint-config"],
-  "plugins": ["react"]
+  "rules": {
+    "@typescript-eslint/no-require-imports": "off",
+    "react/no-unescaped-entities": "off"
+  }
 }
