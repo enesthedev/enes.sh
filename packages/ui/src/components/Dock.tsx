@@ -4,7 +4,7 @@ import { cva, type VariantProps } from 'class-variance-authority'
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion'
 import React, { PropsWithChildren, useRef } from 'react'
 
-import { cn } from '@/utils'
+import { cn } from '@enes-sh/utils'
 
 export interface DockProps extends VariantProps<typeof dockVariants> {
   className?: string

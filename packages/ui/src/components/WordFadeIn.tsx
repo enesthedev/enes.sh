@@ -3,7 +3,7 @@
 import { motion, Variants } from 'framer-motion'
 
 import { useMounted } from '@/hooks'
-import { cn } from '@/utils'
+import { cn } from '@enes-sh/utils'
 
 interface WordFadeInProps {
   words: string
@@ -35,7 +35,7 @@ const WordFadeIn = ({
       initial='hidden'
       animate='visible'
       className={cn(
-        'font-display text-4xl font-bold tracking-[-0.02em] text-black drop-shadow-sm dark:text-white md:text-7xl md:leading-[5rem]',
+        'font-display text-4xl font-bold tracking-[-0.02em] text-black drop-shadow-sm md:text-7xl md:leading-[5rem] dark:text-white',
         className
       )}
     >

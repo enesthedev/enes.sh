@@ -1,4 +1,4 @@
-import { cn } from '@/utils'
+import { cn } from '@enes-sh/utils'
 import React from 'react'
 
 const Skeleton = ({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) => {

@@ -1,7 +1,7 @@
 {
   "private": true,
-  "name": "@enes-sh/shadcn-ui",
-  "version": "1.0.1",
+  "name": "@enes-sh/ui",
+  "version": "1.0.5",
   "description": "Wrapper for @shadcn/ui",
   "author": "Enes Bayraktar <enes.bayraktar@outlook.com.tr>",
   "type": "module",
@@ -15,18 +15,16 @@
     "dev": "tsup --watch"
   },
   "dependencies": {
+    "@enes-sh/utils": "workspace:*",
     "@radix-ui/react-avatar": "^1.1.0",
     "@radix-ui/react-icons": "^1.3.0",
     "@radix-ui/react-navigation-menu": "^1.2.0",
     "@radix-ui/react-separator": "^1.1.0",
     "@radix-ui/react-slot": "^1.1.0",
     "@radix-ui/react-tooltip": "^1.1.2",
-    "class-variance-authority": "^0.7.0",
-    "clsx": "^2.1.1",
     "framer-motion": "^11.9.0",
-    "react": "^18",
-    "react-dom": "^18",
-    "tailwind-merge": "^2.5.2"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
@@ -35,8 +33,8 @@
     "@enes-sh/eslint-config": "workspace:*",
     "@enes-sh/typescript-config": "workspace:*",
     "@types/bun": "latest",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
     "autoprefixer": "^10.4.20",
     "eslint": "^8",
     "eslint-plugin-react": "^7.37.0",
@@ -53,6 +51,10 @@
     ".": {
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
+    },
+    "./hooks": {
+      "types": "./dist/hooks.d.ts",
+      "default": "./dist/hooks.js"
     }
   }
 }

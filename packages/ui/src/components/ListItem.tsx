@@ -1,5 +1,5 @@
 import { NavigationMenuLink } from '@/components'
-import { cn } from '@/utils'
+import { cn } from '@enes-sh/utils'
 import React from 'react'
 
 const ListItem = React.forwardRef<React.ElementRef<'a'>, React.ComponentPropsWithoutRef<'a'>>(

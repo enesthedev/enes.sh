@@ -7,6 +7,6 @@ export default defineConfig({
   target: 'esnext',
   clean: true,
   banner: {
-    js: '"use client";'
+    js: "'use client'"
   }
 })
