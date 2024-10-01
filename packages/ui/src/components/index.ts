@@ -1,6 +1,7 @@
 export * from './Avatar'
 export * from './BlurFade'
 export * from './Button'
+export * from './Card'
 export * from './Dock'
 export * from './Input'
 export * from './ListItem'
