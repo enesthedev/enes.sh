@@ -1,8 +1,16 @@
 'use client'
 
-import { Button, Card, CardContent, CardDescription, CardHeader, CardTitle } from '@enes-sh/ui'
+import {
+  Button,
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+  ReloadIcon
+} from '@enes-sh/ui'
 import { signIn } from 'next-auth/react'
-import { useCallback, useEffect } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { toast } from 'sonner'
 
 const errors: Record<string, string> = {
@@ -27,6 +35,8 @@ export type SignInProps = {
 }
 
 const SignIn = ({ error, callbackUrl }: SignInProps) => {
+  const [loading, setLoading] = useState(false)
+
   useEffect(() => {
     if (error) {
       toast.error(errors[error] || errors.default)
@@ -34,7 +44,11 @@ const SignIn = ({ error, callbackUrl }: SignInProps) => {
   }, [error])
 
   const handleSignIn = useCallback(async () => {
-    await signIn('google', { callbackUrl: callbackUrl })
+    setLoading(true)
+    await signIn('google', {
+      callbackUrl: callbackUrl
+    })
+    setLoading(false)
   }, [callbackUrl])
 
   return (
@@ -46,8 +60,8 @@ const SignIn = ({ error, callbackUrl }: SignInProps) => {
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <Button className='w-full text-sm' onClick={handleSignIn}>
-          Sign In
+        <Button className='w-full text-sm' onClick={handleSignIn} disabled={loading}>
+          {loading ? <ReloadIcon className='h- mr-2 w-4 animate-spin' /> : <>Sign In</>}
         </Button>
       </CardContent>
     </Card>
