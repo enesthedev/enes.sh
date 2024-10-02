@@ -3,15 +3,16 @@ import type { GetServerSidePropsContext, NextApiRequest, NextApiResponse } from 
 import type { NextAuthOptions } from 'next-auth'
 import { getServerSession } from 'next-auth'
 
+import { AuthRoutes } from '@/app/constants'
 import GoogleProvider from 'next-auth/providers/google'
 
 export const authOptions = {
   pages: {
-    signIn: '/sign-in',
-    signOut: '/sign-out',
-    error: '/error',
-    verifyRequest: '/verify-request',
-    newUser: '/new-user'
+    signIn: AuthRoutes.SIGNIN,
+    signOut: AuthRoutes.SIGNOUT,
+    error: AuthRoutes.ERROR,
+    verifyRequest: AuthRoutes.VERIFY_REQUEST,
+    newUser: AuthRoutes.NEW_USER
   },
   providers: [
     GoogleProvider({

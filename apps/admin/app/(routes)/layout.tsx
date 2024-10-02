@@ -1,6 +1,7 @@
 import { NextAuthProvider } from '@/app/providers'
 import { TooltipProvider } from '@enes-sh/ui'
 import type { Metadata, Viewport } from 'next'
+import { Toaster } from 'sonner'
 
 import '@/app/tailwind.css'
 
@@ -26,6 +27,7 @@ export default function Layout({ children, params: { locale } }: LayoutProps) {
     <html lang={locale}>
       <body>
         <NextAuthProvider>
+          <Toaster richColors={true} />
           <TooltipProvider delayDuration={200}>{children}</TooltipProvider>
         </NextAuthProvider>
       </body>
