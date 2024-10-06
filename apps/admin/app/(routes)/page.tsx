@@ -1,6 +1,4 @@
-import SignIn from '@/app/components/SignIn'
-import { auth } from '@/app/helpers/auth'
-
+import { auth } from '@/app/libraries'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@enes-sh/ui'
 
 export default async function Home() {
@@ -9,7 +7,6 @@ export default async function Home() {
   return (
     <div className='grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 p-8 pb-20 font-[family-name:var(--font-geist-sans)] sm:p-20'>
       <pre>{JSON.stringify(session, null, 2)}</pre>
-      <SignIn />
       <Card>
         <CardHeader>
           <CardTitle>Card Title</CardTitle>
