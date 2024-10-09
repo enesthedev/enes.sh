@@ -1,28 +1,23 @@
+import { AuthRoutes } from '@/app/constants'
 import { SignIn } from '@/app/sections'
+import { StringKeyMap } from '@/app/types'
 import { headers } from 'next/headers'
 
 export type PageProps = {
-  searchParams?: { [key: string]: string | undefined }
+  searchParams?: StringKeyMap<string | undefined>
 }
 
 export default async function Page({ searchParams }: PageProps) {
-  let callbackUrl = searchParams?.from || '/'
-  let error = null
+  let { from = '/', error = null } = searchParams || {} // Destructure searchParams with defaults
 
-  if (searchParams?.error) {
-    // This one is for NextAuth client error handling
-    error = searchParams.error
+  if (from.toString().startsWith(AuthRoutes.ERROR)) {
+    const referer = headers().get('referer') || '/'
+    const url = new URL(referer)
+    const fromUrl = new URL(decodeURIComponent(from), url.origin)
+
+    error = fromUrl.searchParams.get('error') || error
+    from = '/' // Reset the callback URL for errors
   }
 
-  if (searchParams?.from?.toString().startsWith('/error')) {
-    const headersList = headers()
-    const referer = headersList.get('referer')
-    const url = new URL(referer?.toString() || '/')
-    const fromUrl = new URL(decodeURIComponent(callbackUrl), url.origin)
-
-    error = fromUrl.searchParams.get('error') // This one is for NextAuth server error handling
-    callbackUrl = '/'
-  }
-
-  return <SignIn callbackUrl={callbackUrl} error={error} />
+  return <SignIn callbackUrl={from} error={error} />
 }
