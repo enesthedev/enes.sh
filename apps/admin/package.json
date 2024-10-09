@@ -9,7 +9,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@auth/drizzle-adapter": "^1.5.3",
+    "@auth/prisma-adapter": "^2.7.0",
     "@enes-sh/db": "workspace:*",
     "@enes-sh/ui": "workspace:*",
     "@enes-sh/utils": "workspace:*",
