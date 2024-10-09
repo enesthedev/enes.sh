@@ -2,7 +2,7 @@
   "extends": ["//"],
   "tasks": {
     "build": {
-      "env": ["POSTGRES_URL"]
+      "env": ["DATABASE_URL"]
     }
   }
 }
