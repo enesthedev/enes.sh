@@ -1,0 +1,42 @@
+{
+  "private": true,
+  "name": "@enes-sh/utils",
+  "version": "1.0.1",
+  "description": "Utility functions for @enes-sh",
+  "author": "Enes Bayraktar <enes.bayraktar@outlook.com.tr>",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch"
+  },
+  "dependencies": {
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^2.5.2"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "devDependencies": {
+    "@enes-sh/eslint-config": "workspace:*",
+    "@enes-sh/typescript-config": "workspace:*",
+    "@types/bun": "latest",
+    "eslint": "^8",
+    "prettier": "^3.3.3",
+    "prettier-plugin-package-perfection": "^1.1.0",
+    "prettier-plugin-sort-json": "^4.0.0",
+    "tsup": "^8.3.0",
+    "typescript": "^5"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  }
+}

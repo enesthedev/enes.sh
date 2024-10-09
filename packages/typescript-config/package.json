@@ -1,0 +1,11 @@
+{
+  "name": "@enes-sh/typescript-config",
+  "author": "Enes Bayraktar <enes.bayraktar@outlook.com.tr>",
+  "description": "Typescript config for enes.sh",
+  "version": "1.0.2",
+  "private": true,
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
+}

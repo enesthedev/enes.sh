@@ -1,0 +1,3 @@
+{
+  "extends": ["@enes-sh/eslint-config"]
+}
