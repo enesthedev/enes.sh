@@ -1,0 +1,32 @@
+{
+  "private": true,
+  "name": "@enes-sh/db",
+  "version": "1.2.0",
+  "description": "Database library of @enes-sh",
+  "author": "Enes Bayraktar <enes.bayraktar@outlook.com.tr>",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write .",
+    "prepare": "npm run build"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "devDependencies": {
+    "@enes-sh/eslint-config": "workspace:*",
+    "@enes-sh/typescript-config": "workspace:*",
+    "@types/bun": "latest",
+    "eslint": "^8",
+    "prettier": "^3.3.3",
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.20.0",
+    "@vercel/postgres": "^0.10.0",
+    "dotenv": "^16.4.5",
+    "prisma": "^5.20.0"
+  }
+}

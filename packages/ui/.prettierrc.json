@@ -1,0 +1,17 @@
+{
+  "arrowParens": "always",
+  "endOfLine": "lf",
+  "jsonRecursiveSort": true,
+  "jsxSingleQuote": true,
+  "plugins": [
+    "prettier-plugin-sort-json",
+    "prettier-plugin-package-perfection",
+    "prettier-plugin-tailwindcss"
+  ],
+  "printWidth": 100,
+  "semi": false,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "tailwindFunctions": ["cn", "clsx", "cva"],
+  "trailingComma": "none"
+}
