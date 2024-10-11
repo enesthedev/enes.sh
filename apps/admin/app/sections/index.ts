@@ -1,3 +1,3 @@
 export * from './SignIn'
-export * from './SignOutCard'
+export * from './SignOut'
 

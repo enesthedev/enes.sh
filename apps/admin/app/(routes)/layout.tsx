@@ -23,7 +23,7 @@ export const viewport: Viewport = {
   ]
 }
 
-export default function Layout({ children, params: { locale } }: LayoutProps) {
+export default async function Layout({ children, params: { locale } }: LayoutProps) {
   return (
     <html lang={locale}>
       <body>

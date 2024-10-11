@@ -1,5 +1,5 @@
-import { SignOutCard } from '@/app/sections'
+import { SignOut } from '@/app/sections'
 
 export default async function Page() {
-  return <SignOutCard />
+  return <SignOut />
 }

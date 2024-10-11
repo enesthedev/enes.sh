@@ -1,5 +1,6 @@
 'use client'
 
+import { CenteredLayout } from '@/app/layouts'
 import {
   Button,
   Card,
@@ -52,19 +53,21 @@ const SignIn = ({ error, callbackUrl }: SignInProps) => {
   }, [callbackUrl])
 
   return (
-    <Card className='mx-5 max-w-[450px]'>
-      <CardHeader>
-        <CardTitle className='text-lg'>Welcome</CardTitle>
-        <CardDescription>
-          Please sign-in with your Google account to access the application.
-        </CardDescription>
-      </CardHeader>
-      <CardContent>
-        <Button className='w-full text-sm' onClick={handleSignIn} disabled={loading}>
-          {loading ? <ReloadIcon className='h- mr-2 w-4 animate-spin' /> : <>Sign In</>}
-        </Button>
-      </CardContent>
-    </Card>
+    <CenteredLayout>
+      <Card className='mx-5 max-w-[450px]'>
+        <CardHeader>
+          <CardTitle className='text-lg'>Welcome</CardTitle>
+          <CardDescription>
+            Please sign-in with your Google account to access the application.
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <Button className='w-full text-sm' onClick={handleSignIn} disabled={loading}>
+            {loading ? <ReloadIcon className='h- mr-2 w-4 animate-spin' /> : <>Sign In</>}
+          </Button>
+        </CardContent>
+      </Card>
+    </CenteredLayout>
   )
 }
 
