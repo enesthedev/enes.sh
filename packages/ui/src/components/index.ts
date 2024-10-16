@@ -1,5 +1,6 @@
 export * from './Avatar'
 export * from './BlurFade'
+export * from './Breadcrumb'
 export * from './Button'
 export * from './Card'
 export * from './Collapsible'
