@@ -14,6 +14,17 @@ type SidebarStore = {
   setSettings: (settings: Partial<SidebarSettings>) => void
 }
 
+export const defaultSidebar = {
+  isOpen: true,
+  isHover: false,
+  settings: { disabled: false, isHoverOpen: false },
+  toggleOpen: () => {},
+  setIsOpen: (isOpen: boolean) => {},
+  setIsHover: (isHover: boolean) => {},
+  getOpenState: () => true,
+  setSettings: (settings: Partial<SidebarSettings>) => {}
+}
+
 export const useSidebar = create(
   persist<SidebarStore>(
     (set, get) => ({
