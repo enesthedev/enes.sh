@@ -1,7 +1,7 @@
 'use client'
 
 import { Menu, Welcome } from '@/app/components'
-import { Navigation } from '@/app/constants'
+import { findPageLabel, Navigation } from '@/app/constants'
 import {
   Button,
   Sheet,
@@ -13,21 +13,22 @@ import {
   VisuallyHidden
 } from '@enes-sh/ui'
 import { MenuIcon } from 'lucide-react'
-
-import { useState } from 'react'
+import { usePathname } from 'next/navigation'
 
 export type NavbarProps = {
-  title: string
+  title?: string
 }
 
 const Navbar = ({ title }: NavbarProps) => {
-  const [open, setOpen] = useState(false)
+  const pathname = usePathname()
+
+  title = title || findPageLabel(pathname)
 
   return (
     <header className='sticky top-0 z-10 w-full border-b bg-white backdrop-blur supports-[backdrop-filter]:bg-white/50'>
       <div className='mx-4 flex h-14 items-center sm:mx-8'>
         <div className='flex items-center justify-start space-x-2 lg:space-x-0'>
-          <Sheet open={open} onOpenChange={setOpen}>
+          <Sheet>
             <SheetTitle>
               <VisuallyHidden.Root>Menu</VisuallyHidden.Root>
             </SheetTitle>
