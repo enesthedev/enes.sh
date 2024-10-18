@@ -49,10 +49,7 @@ export function CollapseMenuButton({
   return isOpen ? (
     <Collapsible open={isCollapsed} onOpenChange={setIsCollapsed} className='w-full'>
       <CollapsibleTrigger className='mb-1 [&[data-state=open]>div>div>svg]:rotate-180' asChild>
-        <Button
-          variant={isSubmenuActive ? 'secondary' : 'ghost'}
-          className='h-10 w-full justify-start'
-        >
+        <Button variant={'link'} className='h-10 w-full justify-start'>
           <div className='flex w-full items-center justify-between'>
             <div className='flex items-center'>
               <span className='mr-4'>
@@ -82,7 +79,7 @@ export function CollapseMenuButton({
         {submenus.map(({ href, label, active }, index) => (
           <Button
             key={index}
-            variant={(active === undefined && pathname === href) || active ? 'secondary' : 'ghost'}
+            variant={(active === undefined && pathname === href) || active ? 'primary' : 'link'}
             className='mb-1 h-10 w-full justify-start'
             asChild
           >

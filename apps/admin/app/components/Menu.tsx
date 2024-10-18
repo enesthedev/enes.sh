@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 
-import { Ellipsis, LogOut } from 'lucide-react'
+import { Ellipsis } from 'lucide-react'
 import { usePathname } from 'next/navigation'
 
 import { CollapseMenuButton } from '@/app/components'
@@ -20,8 +20,8 @@ export function Menu({ isOpen, items }: MenuProps) {
 
   return (
     <ScrollArea className='[&>div>div[style]]:!block'>
-      <nav className='mt-8 h-full w-full'>
-        <ul className='flex min-h-[calc(100vh-48px-36px-16px-32px)] flex-col items-start space-y-1 px-2 lg:min-h-[calc(100vh-32px-40px-32px)]'>
+      <nav className='h-full w-full px-2 pt-4'>
+        <ul className='flex h-full flex-col items-start space-y-1 px-2'>
           {items.map(({ groupLabel, menus }, index) => (
             <li className={cn('w-full', groupLabel ? 'pt-5' : '')} key={index}>
               {(isOpen && groupLabel) || isOpen === undefined ? (
@@ -48,12 +48,12 @@ export function Menu({ isOpen, items }: MenuProps) {
                     <Tooltip delayDuration={100}>
                       <TooltipTrigger asChild>
                         <Button
-                          variant={
-                            (active === undefined && pathname.startsWith(href)) || active
-                              ? 'secondary'
-                              : 'ghost'
-                          }
-                          className='mb-1 h-10 w-full justify-start'
+                          variant='link'
+                          className={cn(
+                            'mb-1 h-10 w-auto justify-start px-0',
+                            ((active === undefined && pathname.startsWith(href)) || active) &&
+                              'underline'
+                          )}
                           asChild
                         >
                           <Link href={href}>
@@ -90,30 +90,6 @@ export function Menu({ isOpen, items }: MenuProps) {
               )}
             </li>
           ))}
-          <li className='flex w-full grow items-end'>
-            <Tooltip delayDuration={100}>
-              <TooltipTrigger asChild>
-                <Button
-                  onClick={() => {}}
-                  variant='outline'
-                  className='mt-5 h-10 w-full justify-center'
-                >
-                  <span className={cn(isOpen === false ? '' : 'mr-4')}>
-                    <LogOut size={18} />
-                  </span>
-                  <p
-                    className={cn(
-                      'whitespace-nowrap',
-                      isOpen === false ? 'hidden opacity-0' : 'opacity-100'
-                    )}
-                  >
-                    Sign out
-                  </p>
-                </Button>
-              </TooltipTrigger>
-              {isOpen === false && <TooltipContent side='right'>Sign out</TooltipContent>}
-            </Tooltip>
-          </li>
         </ul>
       </nav>
     </ScrollArea>
