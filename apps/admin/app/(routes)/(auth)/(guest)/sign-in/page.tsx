@@ -1,5 +1,5 @@
 import { AuthRoutes } from '@/app/constants'
-import { SignIn } from '@/app/sections'
+import { SignIn } from '@/app/sections/auth'
 import { StringKeyMap } from '@/app/types'
 import { headers } from 'next/headers'
 
