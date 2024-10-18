@@ -51,7 +51,9 @@ export function Menu({ isOpen, items }: MenuProps) {
                           variant='link'
                           className={cn(
                             'mb-1 h-10 w-auto justify-start px-0',
-                            ((active === undefined && pathname.startsWith(href)) || active) &&
+                            (pathname == href ||
+                              (active === undefined && href !== '/' && pathname.startsWith(href)) ||
+                              active) &&
                               'underline'
                           )}
                           asChild
