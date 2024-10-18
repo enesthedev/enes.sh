@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "@enes-sh/ui",
-  "version": "1.7.3",
+  "version": "1.8.0",
   "description": "Wrapper for @shadcn/ui",
   "author": "Enes Bayraktar <enes.bayraktar@outlook.com.tr>",
   "type": "module",
@@ -26,6 +26,7 @@
     "@radix-ui/react-separator": "^1.1.0",
     "@radix-ui/react-slot": "^1.1.0",
     "@radix-ui/react-tooltip": "^1.1.2",
+    "@radix-ui/react-visually-hidden": "^1.1.0",
     "framer-motion": "^11.9.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
