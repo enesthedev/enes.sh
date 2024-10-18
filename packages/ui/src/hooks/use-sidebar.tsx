@@ -19,10 +19,10 @@ export const defaultSidebar = {
   isHover: false,
   settings: { disabled: false, isHoverOpen: false },
   toggleOpen: () => {},
-  setIsOpen: (isOpen: boolean) => {},
-  setIsHover: (isHover: boolean) => {},
+  setIsOpen: () => {},
+  setIsHover: () => {},
   getOpenState: () => true,
-  setSettings: (settings: Partial<SidebarSettings>) => {}
+  setSettings: () => {}
 }
 
 export const useSidebar = create(
