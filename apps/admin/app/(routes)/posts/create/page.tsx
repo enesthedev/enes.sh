@@ -1,5 +1,6 @@
 import { getPosts } from '@/app/actions'
 import { ContentLayout, SidebarLayout } from '@/app/layouts'
+import { CreatePostForm } from '@/app/sections/posts'
 
 export default async function Page() {
   const posts = await getPosts({})
@@ -8,7 +9,9 @@ export default async function Page() {
   return (
     <SidebarLayout>
       <ContentLayout title='Create Post'>
-        <div className='h-[2000px]'>test</div>
+        <div className='border bg-white p-4'>
+          <CreatePostForm />
+        </div>
       </ContentLayout>
     </SidebarLayout>
   )

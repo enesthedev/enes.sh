@@ -29,7 +29,7 @@ const Breadcrumbs = () => {
   })
 
   return (
-    <Breadcrumb>
+    <Breadcrumb className='h-[36px] items-center'>
       <BreadcrumbList>
         <BreadcrumbItem>
           <BreadcrumbLink asChild>
