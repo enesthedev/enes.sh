@@ -16,40 +16,34 @@ import {
   SelectValue
 } from '@enes-sh/ui'
 
+import { ForwardRefEditor } from '@/app/components'
+import { createPostSchema } from '@/app/schemas'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
-import { toast } from 'sonner'
 import { z } from 'zod'
 
-const formSchema = z.object({
-  title: z.string().min(2, {
-    message: 'Title must be at least 2 characters.'
-  }),
-  lagnuage: z.string({
-    required_error: 'Please select an language to display.'
-  })
-})
+export type CreatePostFormProps = {
+  submit: (values: string) => void
+}
 
-const CreatePostForm = () => {
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+const CreatePostForm = ({ submit }: CreatePostFormProps) => {
+  const form = useForm<z.infer<typeof createPostSchema>>({
+    resolver: zodResolver(createPostSchema),
     defaultValues: {
       title: '',
-      lagnuage: 'tr'
+      language: 'tr',
+      content: '> asd'
     }
   })
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    toast(
-      <pre className='mt-2 w-[340px] rounded-md bg-slate-950 p-4'>
-        <code className='text-white'>{JSON.stringify(values, null, 2)}</code>
-      </pre>
-    )
-  }
-
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-8'>
+      <form
+        onSubmit={form.handleSubmit((values) => {
+          submit(JSON.stringify(values))
+        })}
+        className='space-y-5'
+      >
         <div className='rounded-xl border bg-white p-5'>
           <div className='flex flex-row space-x-5'>
             <div className='w-full'>
@@ -72,7 +66,7 @@ const CreatePostForm = () => {
             <div className='w-1/4'>
               <FormField
                 control={form.control}
-                name='lagnuage'
+                name='language'
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>Language</FormLabel>
@@ -94,7 +88,27 @@ const CreatePostForm = () => {
             </div>
           </div>
         </div>
-        <Button type='submit'>Submit</Button>
+        <div className='flex flex-col space-y-4 rounded-xl border bg-white p-5'>
+          <FormField
+            control={form.control}
+            name='content'
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Post Content</FormLabel>
+                <ForwardRefEditor
+                  contentEditableClassName='!px-1 !py-2 leading-3'
+                  className='prose max-w-full'
+                  markdown={field.value}
+                  onChange={field.onChange}
+                />
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        </div>
+        <Button type='submit' className='px-6'>
+          Submit
+        </Button>
       </form>
     </Form>
   )

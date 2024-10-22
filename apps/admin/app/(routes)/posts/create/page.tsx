@@ -1,14 +1,18 @@
-import { getPosts } from '@/app/actions'
 import { ContentLayout, SidebarLayout } from '@/app/layouts'
 import { CreatePostForm } from '@/app/sections/posts'
 
+import '@mdxeditor/editor/style.css'
+
 export default async function Page() {
-  const posts = await getPosts({})
-  console.log(posts)
+  const handleSubmit = async (values) => {
+    'use server'
+    console.log(values)
+  }
+
   return (
     <SidebarLayout>
       <ContentLayout title='Create Post'>
-        <CreatePostForm />
+        <CreatePostForm submit={handleSubmit} />
       </ContentLayout>
     </SidebarLayout>
   )
