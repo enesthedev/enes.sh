@@ -5,13 +5,10 @@ import { CreatePostForm } from '@/app/sections/posts'
 export default async function Page() {
   const posts = await getPosts({})
   console.log(posts)
-
   return (
     <SidebarLayout>
       <ContentLayout title='Create Post'>
-        <div className='border bg-white p-4'>
-          <CreatePostForm />
-        </div>
+        <CreatePostForm />
       </ContentLayout>
     </SidebarLayout>
   )
