@@ -9,7 +9,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@auth/prisma-adapter": "^2.7.0",
+    "@auth/prisma-adapter": "^2.7.2",
     "@enes-sh/db": "workspace:*",
     "@enes-sh/ui": "workspace:*",
     "@enes-sh/utils": "workspace:*",
@@ -18,11 +18,11 @@
     "@t3-oss/env-nextjs": "^0.11.1",
     "framer-motion": "^11.11.9",
     "lucide-react": "^0.453.0",
-    "next": "14.2.13",
+    "next": "^14.2.15",
     "next-auth": "^4.24.8",
-    "react": "^18",
-    "react-dom": "^18",
-    "react-hook-form": "^7.53.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-hook-form": "^7.53.1",
     "sonner": "^1.5.0",
     "zod": "^3.23.8"
   },
@@ -30,18 +30,18 @@
     "@enes-sh/eslint-config": "workspace:*",
     "@enes-sh/typescript-config": "workspace:*",
     "@tailwindcss/typography": "^0.5.15",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8",
+    "@types/node": "^20.16.14",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.1",
+    "eslint": "^8.57.1",
     "eslint-config-next": "14.2.13",
-    "jiti": "^2.0.0",
-    "postcss": "^8",
+    "jiti": "^2.3.3",
+    "postcss": "^8.4.47",
     "prettier": "^3.3.3",
     "prettier-plugin-package-perfection": "^1.1.0",
     "prettier-plugin-sort-json": "^4.0.0",
     "prettier-plugin-tailwindcss": "^0.6.8",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "tailwindcss": "^3.4.14",
+    "typescript": "^5.6.3"
   }
 }
