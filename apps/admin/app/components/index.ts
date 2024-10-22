@@ -1,4 +1,5 @@
 export * from './CollapseMenuButton'
+export * from './ForwardRefEditor'
 export * from './Menu'
 export * from './SidebarToggle'
 export * from './Welcome'
