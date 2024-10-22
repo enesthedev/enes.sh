@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "@enes-sh/admin",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "scripts": {
     "build": "next build",
     "dev": "next dev",
@@ -28,6 +28,7 @@
   "devDependencies": {
     "@enes-sh/eslint-config": "workspace:*",
     "@enes-sh/typescript-config": "workspace:*",
+    "@tailwindcss/typography": "^0.5.15",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
