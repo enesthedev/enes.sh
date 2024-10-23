@@ -4,9 +4,9 @@ import { CreatePostForm } from '@/app/sections/posts'
 import '@mdxeditor/editor/style.css'
 
 export default async function Page() {
-  const handleSubmit = async (values) => {
+  const handleSubmit = async (values: string) => {
     'use server'
-    console.log(values)
+    
   }
 
   return (
