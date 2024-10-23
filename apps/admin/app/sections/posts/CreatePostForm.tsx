@@ -32,19 +32,18 @@ const CreatePostForm = ({ submit }: CreatePostFormProps) => {
     defaultValues: {
       title: '',
       language: 'tr',
-      content: ''
+      body: ''
     }
   })
 
-  const handleSubmit = () => {
-    form.handleSubmit((values: z.infer<typeof createPostSchema>) => {
-      submit(JSON.stringify(values))
-    })
-  }
-
   return (
     <Form {...form}>
-      <form onSubmit={handleSubmit} className='space-y-5'>
+      <form
+        onSubmit={form.handleSubmit(async (values: z.infer<typeof createPostSchema>) => {
+          await submit(JSON.stringify({ ...values, type: 'POST' }))
+        })}
+        className='space-y-5'
+      >
         <div className='rounded-xl border bg-white p-5'>
           <div className='flex flex-row space-x-5'>
             <div className='w-full'>
@@ -92,7 +91,7 @@ const CreatePostForm = ({ submit }: CreatePostFormProps) => {
         <div className='flex flex-col space-y-4 rounded-xl border bg-white p-5'>
           <FormField
             control={form.control}
-            name='content'
+            name='body'
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Post Content</FormLabel>

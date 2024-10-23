@@ -1,7 +1,7 @@
 import { AuthRoutes } from '@/app/constants'
-import { SignIn } from '@/app/sections/auth'
 import { StringKeyMap } from '@/app/types'
 import { headers } from 'next/headers'
+import { SignIn } from './components'
 
 export type PageProps = {
   searchParams?: StringKeyMap<string | undefined>

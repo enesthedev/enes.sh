@@ -1,4 +1,4 @@
-import { BookMarked, LayoutGrid, LogOut, Notebook } from 'lucide-react'
+import { BookMarked, LayoutGrid, Notebook } from 'lucide-react'
 
 export const Navigation = [
   {
@@ -19,11 +19,6 @@ export const Navigation = [
         href: '/books',
         label: 'Books',
         icon: BookMarked
-      },
-      {
-        href: '/sign-out',
-        label: 'Sign Out',
-        icon: LogOut
       }
     ]
   }

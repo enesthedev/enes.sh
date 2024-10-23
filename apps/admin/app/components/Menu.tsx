@@ -2,13 +2,14 @@
 
 import Link from 'next/link'
 
-import { Ellipsis } from 'lucide-react'
+import { Ellipsis, LogOut } from 'lucide-react'
 import { usePathname } from 'next/navigation'
 
 import { CollapseMenuButton } from '@/app/components'
 import { Group } from '@/app/types'
 import { Button, ScrollArea, Tooltip, TooltipContent, TooltipTrigger } from '@enes-sh/ui'
 import { cn } from '@enes-sh/utils'
+import { signOut } from 'next-auth/react'
 
 export type MenuProps = {
   isOpen: boolean | undefined
@@ -90,6 +91,36 @@ export function Menu({ isOpen, items }: MenuProps) {
                   </div>
                 )
               )}
+
+              <div className='w-full'>
+                <Tooltip delayDuration={100}>
+                  <TooltipTrigger asChild>
+                    <Button
+                      variant='link'
+                      className={cn('mb-1 h-10 w-auto justify-start px-0')}
+                      onClick={() => signOut()}
+                      asChild
+                    >
+                      <Link href='javascript:void(0)'>
+                        <span className={cn(isOpen === false ? '' : 'mr-4')}>
+                          <LogOut size={18} />
+                        </span>
+                        <p
+                          className={cn(
+                            'max-w-[200px] truncate',
+                            isOpen === false
+                              ? '-translate-x-96 opacity-0'
+                              : 'translate-x-0 opacity-100'
+                          )}
+                        >
+                          Sign Out
+                        </p>
+                      </Link>
+                    </Button>
+                  </TooltipTrigger>
+                  {isOpen === false && <TooltipContent side='right'>Sign Out</TooltipContent>}
+                </Tooltip>
+              </div>
             </li>
           ))}
         </ul>

@@ -7,7 +7,7 @@ const createPostSchema = z.object({
   language: z.string({
     required_error: 'Please select an language to display.'
   }),
-  content: z.string().min(2, { message: 'Content is required.' })
+  body: z.string().min(2, { message: 'Content is required.' })
 })
 
 export { createPostSchema }
