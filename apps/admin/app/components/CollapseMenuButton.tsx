@@ -23,7 +23,7 @@ import {
 
 import { cn } from '@enes-sh/utils'
 
-import { Submenu } from '@/app/types'
+import { Submenu } from '@/shared/types'
 import { usePathname } from 'next/navigation'
 
 interface CollapseMenuButtonProps {

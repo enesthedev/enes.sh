@@ -1,9 +1,9 @@
-import { NextAuthProvider } from '@/app/providers'
+import { NextAuthProvider } from '@/packages/next-auth/providers'
 import { TooltipProvider } from '@enes-sh/ui'
 import type { Metadata, Viewport } from 'next'
 import { Toaster } from 'sonner'
 
-import '@/app/tailwind.css'
+import '@/app/styles/tailwind.css'
 
 type LayoutProps = {
   children: React.ReactNode

@@ -6,7 +6,7 @@ import { Ellipsis, LogOut } from 'lucide-react'
 import { usePathname } from 'next/navigation'
 
 import { CollapseMenuButton } from '@/app/components'
-import { Group } from '@/app/types'
+import { Group } from '@/shared/types'
 import { Button, ScrollArea, Tooltip, TooltipContent, TooltipTrigger } from '@enes-sh/ui'
 import { cn } from '@enes-sh/utils'
 import { signOut } from 'next-auth/react'
@@ -101,7 +101,7 @@ export function Menu({ isOpen, items }: MenuProps) {
                       onClick={() => signOut()}
                       asChild
                     >
-                      <Link href='javascript:void(0)'>
+                      <Link href='#'>
                         <span className={cn(isOpen === false ? '' : 'mr-4')}>
                           <LogOut size={18} />
                         </span>
