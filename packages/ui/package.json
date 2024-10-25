@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "@enes-sh/ui",
-  "version": "2.4.0",
+  "version": "2.5.0",
   "description": "Wrapper for @shadcn/ui",
   "author": "Enes Bayraktar <enes.bayraktar@outlook.com.tr>",
   "type": "module",
@@ -17,6 +17,7 @@
   "dependencies": {
     "@enes-sh/utils": "workspace:*",
     "@radix-ui/react-avatar": "^1.1.0",
+    "@radix-ui/react-checkbox": "^1.1.2",
     "@radix-ui/react-collapsible": "^1.1.1",
     "@radix-ui/react-dialog": "^1.1.2",
     "@radix-ui/react-dropdown-menu": "^2.1.2",
