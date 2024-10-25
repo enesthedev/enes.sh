@@ -13,7 +13,7 @@ const ContentLayout = ({ title, children, actions }: ContentLayoutProps) => {
   return (
     <div>
       <Navbar title={title} />
-      <div className='container flex flex-col px-4 pb-8 pt-8 sm:px-8'>
+      <div className='container flex flex-col space-y-5 px-4 pb-8 pt-8 sm:px-8'>
         <div className='flex flex-row items-center justify-between'>
           <Breadcrumbs />
           {actions}
