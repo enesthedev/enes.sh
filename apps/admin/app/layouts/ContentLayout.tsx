@@ -1,6 +1,6 @@
 'use client'
 
-import { Breadcrumbs, Navbar } from '@/app/components/sections'
+import { Breadcrumbs, Navbar } from '@/app/features'
 import React from 'react'
 
 interface ContentLayoutProps {

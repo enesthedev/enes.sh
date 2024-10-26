@@ -1,4 +1,4 @@
-import { SignIn } from '@/app/components/sections/sign-in'
+import { SignIn } from '@/app/features/auth'
 import { AuthRoutes } from '@/shared/constants'
 import { StringKeyMap } from '@/shared/types'
 import { headers } from 'next/headers'

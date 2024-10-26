@@ -1,6 +1,6 @@
 'use client'
 
-import { CenteredLayout } from '@/app/components/layouts'
+import { CenteredLayout } from '@/app/layouts'
 import {
   Button,
   Card,

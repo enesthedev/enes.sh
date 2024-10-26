@@ -1,5 +1,6 @@
-import { ContentLayout, SidebarLayout } from '@/app/components/layouts'
-import { CreatePostButton } from '@/app/components/sections/posts'
+import { getAllPosts } from '@/app/actions'
+import { CreatePostButton, PostsDataTable, PostsDataTableColumns } from '@/app/features/posts'
+import { ContentLayout, SidebarLayout } from '@/app/layouts'
 
 const PageActions = () => {
   return (
@@ -10,10 +11,12 @@ const PageActions = () => {
 }
 
 export default async function Page() {
+  const data = await getAllPosts()
+
   return (
     <SidebarLayout>
       <ContentLayout actions={<PageActions />}>
-        <div className='h-[2000px]'>test</div>
+        <PostsDataTable columns={PostsDataTableColumns} data={data.posts} />
       </ContentLayout>
     </SidebarLayout>
   )

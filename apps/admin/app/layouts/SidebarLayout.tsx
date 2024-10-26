@@ -1,6 +1,6 @@
 'use client'
 
-import { Sidebar } from '@/app/components/sections'
+import { Sidebar } from '@/app/features'
 import { useStore } from '@/app/hooks'
 import { defaultSidebar, useSidebar } from '@enes-sh/ui'
 import { cn } from '@enes-sh/utils'

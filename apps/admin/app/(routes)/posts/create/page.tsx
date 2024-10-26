@@ -1,6 +1,6 @@
 import { createPost } from '@/app/actions'
-import { ContentLayout, SidebarLayout } from '@/app/components/layouts'
-import { CreatePostForm } from '@/app/components/sections/posts'
+import { CreatePostForm } from '@/app/features/posts'
+import { ContentLayout, SidebarLayout } from '@/app/layouts'
 
 import '@mdxeditor/editor/style.css'
 

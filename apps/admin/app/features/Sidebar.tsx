@@ -1,6 +1,7 @@
 'use client'
 
-import { Menu, Welcome } from '@/app/components'
+import { Menu } from '@/app/components'
+import { Welcome } from '@/app/features'
 import { useStore } from '@/app/hooks'
 import { Navigation } from '@/shared/constants'
 import { defaultSidebar, useSidebar } from '@enes-sh/ui'
