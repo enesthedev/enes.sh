@@ -1,4 +1,5 @@
 export * from './Avatar'
+export * from './Badge'
 export * from './BlurFade'
 export * from './Breadcrumb'
 export * from './Button'
@@ -24,4 +25,3 @@ export * from './Tooltip'
 export * from './Transition'
 export * from './VisuallyHidden'
 export * from './WordFadeIn'
-
