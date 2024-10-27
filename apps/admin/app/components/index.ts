@@ -1,4 +1,5 @@
 export * from './CollapseMenuButton'
+export * from './DataTableColumnHeader'
 export * from './DataTablePagination'
 export * from './ForwardRefEditor'
 export * from './Menu'
