@@ -1,6 +1,7 @@
 'use client'
 
-import { Menu, Welcome } from '@/app/components'
+import { Menu } from '@/app/components'
+import { Welcome } from '@/app/features'
 import { findPageLabel, Navigation } from '@/shared/constants'
 import {
   Button,

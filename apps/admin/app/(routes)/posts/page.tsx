@@ -1,11 +1,12 @@
 import { getAllPosts } from '@/app/actions'
-import { CreatePostButton, PostsDataTable, PostsDataTableColumns } from '@/app/features/posts'
+import { RedirectButton } from '@/app/components'
+import { PostsDataTable, PostsDataTableColumns } from '@/app/features/posts'
 import { ContentLayout, SidebarLayout } from '@/app/layouts'
 
 const PageActions = () => {
   return (
     <>
-      <CreatePostButton />
+      <RedirectButton href='/posts/create'>Create Post</RedirectButton>
     </>
   )
 }
