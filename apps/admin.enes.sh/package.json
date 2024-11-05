@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@enes-sh/admin",
+  "name": "admin.enes.sh",
   "version": "3.1.0",
   "scripts": {
     "build": "next build",
