@@ -1,6 +1,6 @@
 'use server'
 
-import { PaginationParams } from '@/shared/types'
+import { PaginationParams } from '@/app/types'
 import { prisma } from '@enes-sh/db'
 
 const getPaginatedPosts = async ({ page = 1, pageSize = 10 }: PaginationParams) => {

@@ -1,4 +1,4 @@
-import { AuthRoutes } from '@/shared/constants'
+import { AuthRoutes } from '@/app/constants'
 import { getToken } from 'next-auth/jwt'
 import { NextResponse } from 'next/server'
 

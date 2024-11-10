@@ -17,7 +17,7 @@ import {
 } from '@enes-sh/ui'
 
 import { ForwardRefEditor } from '@/app/components'
-import { CreatePostSchema } from '@/shared/schemas'
+import { CreatePostSchema } from '@/app/schemas'
 import { Content } from '@enes-sh/db'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useRouter } from 'next/navigation'

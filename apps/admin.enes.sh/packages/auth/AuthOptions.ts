@@ -1,5 +1,5 @@
+import { AuthRoutes } from '@/app/constants'
 import { env } from '@/env'
-import { AuthRoutes } from '@/shared/constants'
 import { PrismaAdapter } from '@auth/prisma-adapter'
 import { prisma } from '@enes-sh/db'
 import { NextAuthOptions } from 'next-auth'

@@ -1,8 +1,8 @@
 'use client'
 
 import { Menu } from '@/app/components'
+import { findPageLabel, Navigation } from '@/app/constants'
 import { Welcome } from '@/app/features'
-import { findPageLabel, Navigation } from '@/shared/constants'
 import {
   Button,
   Sheet,

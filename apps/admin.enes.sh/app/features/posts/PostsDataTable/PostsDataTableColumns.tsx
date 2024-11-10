@@ -1,7 +1,7 @@
 'use client'
 
 import { DataTableColumnHeader } from '@/app/components'
-import { LanguageCodes } from '@/shared/constants'
+import { LanguageCodes } from '@/app/constants'
 import { Content } from '@enes-sh/db'
 import { Badge } from '@enes-sh/ui'
 import { ColumnDef } from '@tanstack/react-table'

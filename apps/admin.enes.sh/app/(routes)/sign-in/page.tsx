@@ -1,6 +1,6 @@
+import { AuthRoutes } from '@/app/constants'
 import { SignIn } from '@/app/features/auth'
-import { AuthRoutes } from '@/shared/constants'
-import { StringKeyMap } from '@/shared/types'
+import { StringKeyMap } from '@/app/types'
 import { headers } from 'next/headers'
 
 export type PageProps = {

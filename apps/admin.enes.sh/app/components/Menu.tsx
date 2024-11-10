@@ -6,7 +6,7 @@ import { Ellipsis, LogOut } from 'lucide-react'
 import { usePathname } from 'next/navigation'
 
 import { CollapseMenuButton } from '@/app/components'
-import { Group } from '@/shared/types'
+import { Group } from '@/app/types'
 import { Button, ScrollArea, Tooltip, TooltipContent, TooltipTrigger } from '@enes-sh/ui'
 import { cn } from '@enes-sh/utils'
 import { signOut } from 'next-auth/react'
