@@ -1,4 +1,4 @@
-import { AuthRoutes } from '@/app/constants'
+import { AUTH_ROUTES } from '@/app/constants'
 import { getToken } from 'next-auth/jwt'
 import { NextResponse } from 'next/server'
 
@@ -9,7 +9,7 @@ export default withAuth(
     const token = await getToken({ req })
 
     const isAuth = !!token
-    const isAuthPage = req.nextUrl.pathname.startsWith(`${AuthRoutes.SIGNIN}`)
+    const isAuthPage = req.nextUrl.pathname.startsWith(`${AUTH_ROUTES.SIGNIN}`)
 
     if (isAuthPage) {
       if (isAuth) {
@@ -21,7 +21,7 @@ export default withAuth(
     if (!isAuth) {
       const from = req.nextUrl.pathname + (req.nextUrl.search || '')
       return NextResponse.redirect(
-        new URL(`${AuthRoutes.SIGNIN}?from=${encodeURIComponent(from)}`, req.url)
+        new URL(`${AUTH_ROUTES.SIGNIN}?from=${encodeURIComponent(from)}`, req.url)
       )
     }
 

@@ -1,8 +1,9 @@
 'use client'
 
 import { Menu } from '@/app/components'
-import { findPageLabel, Navigation } from '@/app/constants'
+import { NAVIGATION } from '@/app/constants'
 import { Welcome } from '@/app/features'
+import { findPageLabel } from '@/app/utils'
 import {
   Button,
   Sheet,
@@ -42,7 +43,7 @@ const Navbar = ({ title }: NavbarProps) => {
               <SheetHeader className='items-start'>
                 <Welcome />
               </SheetHeader>
-              <Menu isOpen items={Navigation} />
+              <Menu isOpen items={NAVIGATION} />
             </SheetContent>
             <SheetDescription />
           </Sheet>

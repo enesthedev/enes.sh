@@ -1,7 +1,7 @@
 'use client'
 
 import { DataTableColumnHeader } from '@/app/components'
-import { LanguageCodes } from '@/app/constants'
+import { LANGUAGE_CODES } from '@/app/constants'
 import { Content } from '@enes-sh/db'
 import { Badge } from '@enes-sh/ui'
 import { ColumnDef } from '@tanstack/react-table'
@@ -24,7 +24,7 @@ export const PostsDataTableColumns: ColumnDef<Content>[] = [
     header: ({ column }) => <DataTableColumnHeader column={column} title='Language' />,
     cell: ({ row }) => (
       <Badge variant='outline' className='px-4'>
-        {LanguageCodes.get(row.getValue('language'))}
+        {LANGUAGE_CODES.get(row.getValue('language'))}
       </Badge>
     )
   },

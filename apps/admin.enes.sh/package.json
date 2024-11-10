@@ -14,7 +14,6 @@
     "@enes-sh/ui": "workspace:*",
     "@enes-sh/utils": "workspace:*",
     "@hookform/resolvers": "^3.9.0",
-    "@mdxeditor/editor": "^3.14.0",
     "@t3-oss/env-nextjs": "^0.11.1",
     "@tanstack/react-table": "^8.20.5",
     "framer-motion": "^11.11.9",

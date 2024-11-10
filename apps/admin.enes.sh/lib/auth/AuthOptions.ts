@@ -1,4 +1,4 @@
-import { AuthRoutes } from '@/app/constants'
+import { AUTH_ROUTES } from '@/app/constants'
 import { env } from '@/env'
 import { PrismaAdapter } from '@auth/prisma-adapter'
 import { prisma } from '@enes-sh/db'
@@ -8,11 +8,11 @@ import GoogleProvider from 'next-auth/providers/google'
 
 export const AuthOptions = {
   pages: {
-    signIn: AuthRoutes.SIGNIN,
-    signOut: AuthRoutes.SIGNOUT,
-    error: AuthRoutes.ERROR,
-    verifyRequest: AuthRoutes.VERIFY_REQUEST,
-    newUser: AuthRoutes.NEW_USER
+    signIn: AUTH_ROUTES.SIGNIN,
+    signOut: AUTH_ROUTES.SIGNOUT,
+    error: AUTH_ROUTES.ERROR,
+    verifyRequest: AUTH_ROUTES.VERIFY_REQUEST,
+    newUser: AUTH_ROUTES.NEW_USER
   },
   adapter: PrismaAdapter(prisma),
   providers: [

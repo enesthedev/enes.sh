@@ -1,4 +1,4 @@
-import { AuthRoutes } from '@/app/constants'
+import { AUTH_ROUTES } from '@/app/constants'
 import { SignIn } from '@/app/features/auth'
 import { StringKeyMap } from '@/app/types'
 import { headers } from 'next/headers'
@@ -10,7 +10,7 @@ export type PageProps = {
 export default async function Page({ searchParams }: PageProps) {
   let { from = '/', error = null } = searchParams || {} // Destructure searchParams with defaults
 
-  if (from.toString().startsWith(AuthRoutes.ERROR)) {
+  if (from.toString().startsWith(AUTH_ROUTES.ERROR)) {
     const referer = headers().get('referer') || '/'
     const url = new URL(referer)
     const fromUrl = new URL(decodeURIComponent(from), url.origin)

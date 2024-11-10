@@ -1,3 +1,4 @@
-export * from './AuthRoutes'
-export * from './LanguageCodes'
-export * from './Navigation'
+export * from './auth-routes'
+export * from './language-codes'
+export * from './navigation'
+

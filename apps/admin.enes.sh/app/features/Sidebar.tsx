@@ -1,7 +1,7 @@
 'use client'
 
 import { Menu } from '@/app/components'
-import { Navigation } from '@/app/constants'
+import { NAVIGATION } from '@/app/constants'
 import { Welcome } from '@/app/features'
 import { useStore } from '@/app/hooks'
 import { defaultSidebar, useSidebar } from '@enes-sh/ui'
@@ -23,7 +23,7 @@ const Sidebar = () => {
         className='relative flex h-full flex-col overflow-y-auto border-r px-3 py-4'
       >
         <Welcome />
-        <Menu isOpen={getOpenState()} items={Navigation} />
+        <Menu isOpen={getOpenState()} items={NAVIGATION} />
       </div>
     </aside>
   )
