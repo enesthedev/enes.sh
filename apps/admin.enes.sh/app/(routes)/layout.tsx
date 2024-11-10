@@ -1,4 +1,4 @@
-import { NextAuthProvider } from '@/packages/auth/providers'
+import { NextAuthProvider } from '@/lib/auth/providers'
 import { TooltipProvider } from '@enes-sh/ui'
 import type { Metadata, Viewport } from 'next'
 import { Toaster } from 'sonner'
