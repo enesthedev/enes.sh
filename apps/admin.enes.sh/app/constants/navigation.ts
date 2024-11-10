@@ -1,6 +1,6 @@
 import { BookMarked, LayoutGrid, Notebook } from 'lucide-react'
 
-export const Navigation = [
+export const NAVIGATION = [
   {
     groupLabel: '',
     menus: [
@@ -23,13 +23,3 @@ export const Navigation = [
     ]
   }
 ]
-
-export function findPageLabel(pathname: string): string {
-  for (const group of Navigation) {
-    const match = group.menus.find((menu) => menu.href === pathname)
-    if (match) {
-      return match.label
-    }
-  }
-  return ''
-}

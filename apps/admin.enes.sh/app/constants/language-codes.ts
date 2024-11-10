@@ -1,4 +1,4 @@
-const LanguageCodes = new Map<string, string>([
+const LANGUAGE_CODES = new Map<string, string>([
   ['en', 'English'],
   ['tr', 'Turkish'],
   ['fr', 'French'],
@@ -21,4 +21,4 @@ const LanguageCodes = new Map<string, string>([
   ['he', 'Hebrew']
 ])
 
-export { LanguageCodes }
+export { LANGUAGE_CODES }

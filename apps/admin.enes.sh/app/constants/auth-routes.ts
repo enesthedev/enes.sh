@@ -1,4 +1,4 @@
-export enum AuthRoutes {
+export enum AUTH_ROUTES {
   SIGNIN = '/sign-in',
   SIGNOUT = '/sign-out',
   ERROR = '/error',
