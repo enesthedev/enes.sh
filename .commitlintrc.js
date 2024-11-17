@@ -15,6 +15,6 @@ const scopes = [...apps, ...packages];
 export default {
   extends: ['@commitlint/config-conventional'],
   rules: {
-    'scope-enum': [2, 'always', ['root', 'release', ...scopes]],
+    'scope-enum': [2, 'always', ['root', 'release', 'admin', ...scopes]],
   },
 };

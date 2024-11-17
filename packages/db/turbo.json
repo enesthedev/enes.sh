@@ -2,7 +2,7 @@
   "extends": ["//"],
   "tasks": {
     "build": {
-      "env": ["DATABASE_URL"]
+      "env": ["DATABASE_URL", "NODE_ENV"]
     }
   }
 }
