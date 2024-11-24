@@ -1,36 +1,26 @@
 {
   "name": "enes-sh",
-  "author": "Enes Bayraktar <enes.bayraktar@outlook.com.tr>",
-  "description": "Personal blog website built with NextJS",
-  "version": "1.3.0",
+  "version": "0.1.0",
   "private": true,
-  "type": "module",
   "scripts": {
-    "build": "turbo build",
-    "dev": "turbo dev",
-    "build:packages": "turbo build --filter=./packages/*",
-    "dev:packages": "turbo dev --filter=./packages/*",
-    "dev:tools": "turbo dev --filter=./tools/*",
-    "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "prepare": "husky"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "react": "19.0.0-rc-66855b96-20241106",
+    "react-dom": "19.0.0-rc-66855b96-20241106",
+    "next": "15.0.3"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.5.0",
-    "@commitlint/config-conventional": "^19.5.0",
-    "@types/bun": "latest",
-    "husky": "^9.1.6",
-    "prettier": "^3.3.3",
-    "turbo": "^2.1.3",
-    "typescript": "^5.6.2"
-  },
-  "engines": {
-    "node": ">=18"
-  },
-  "packageManager": "bun@1.1.29",
-  "workspaces": [
-    "apps/*",
-    "packages/*",
-    "tools/*"
-  ]
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "eslint": "^8",
+    "eslint-config-next": "15.0.3"
+  }
 }

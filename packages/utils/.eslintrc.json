@@ -1,6 +1,0 @@
-{
-  "extends": ["@enes-sh/eslint-config"],
-  "rules": {
-    "@typescript-eslint/no-require-imports": "off"
-  }
-}
