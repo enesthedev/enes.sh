@@ -1,6 +1,9 @@
-import { useTranslations } from 'next-intl';
+import { PublicationLandingDetails } from '../features/publication/components';
 
 export default function Page() {
-  const t = useTranslations();
-  return <>{t('hello-world')}</>;
+  return (
+    <div>
+      <PublicationLandingDetails />
+    </div>
+  );
 }
