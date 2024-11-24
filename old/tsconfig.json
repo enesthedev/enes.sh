@@ -1,3 +1,0 @@
-{
-  "extends": "@enes-sh/typescript-config/tsconfig.base.json",
-}
