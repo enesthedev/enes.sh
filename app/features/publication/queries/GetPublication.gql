@@ -1,8 +1,0 @@
-query GetPublication($host: String!) {
-  publication(host: $host) {
-    title
-    about {
-      text
-    }
-  }
-}
