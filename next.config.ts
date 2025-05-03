@@ -1,18 +1,7 @@
-import type { NextConfig } from 'next';
-
-import createNextIntlPlugin from 'next-intl/plugin';
-
-const withNextIntl = createNextIntlPlugin('./app/i18n/request.ts');
+import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'cdn.hashnode.com',
-      },
-    ],
-  },
+  /* config options here */
 };
 
-export default withNextIntl(nextConfig);
+export default nextConfig;
