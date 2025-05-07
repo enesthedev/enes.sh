@@ -1,3 +1,3 @@
-import { routing } from './routing';
+import { routing } from "./routing";
 
 export type Locale = (typeof routing.locales)[number];
