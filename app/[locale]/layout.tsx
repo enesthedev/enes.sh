@@ -1,8 +1,8 @@
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { PropsWithChildren } from "react";
-import { routing } from "../i18n/routing";
-import { Locale } from "../i18n/types";
+import { routing } from "../features/localization/routing";
+import { Locale } from "../features/localization/types";
 
 import { NextIntlClientProvider } from "next-intl";
 
